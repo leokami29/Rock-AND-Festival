@@ -1,5 +1,5 @@
-@use 'base/mixins' as m;
-@use 'base/variables' as v;
+@use 'base/mixins' as m; // Importar el módulo 'base/mixins' y asignarle un alias 'm'
+@use 'base/variables' as v; // Importar el módulo 'base/variables' y asignarle un alias 'v'
 
 .boletos {
     padding: 5rem 0;
@@ -11,8 +11,8 @@
     }
 
     .contenedor__boletos {
-        @include m.tablet {
-            @include m.grid(2, 5rem);
+        @include m.tablet { // Incluir el mixin 'tablet' definido en 'base/mixins'
+            @include m.grid(2, 5rem); // Incluir el mixin 'grid' definido en 'base/mixins' con argumentos personalizados
         }
     }
 }
@@ -35,7 +35,6 @@
         }
     }
 
-
     &__header {
         background-color: v.$rosa;
         p {
@@ -47,7 +46,7 @@
     &__body {
         background-color: v.$blanco;
         ul {
-            @include m.resetear_lista;
+            @include m.resetear_lista; // Incluir el mixin 'resetear_lista' definido en 'base/mixins'
             li, :nth-child(odd) {
                 background-color: v.$blanco;
                 padding: 1rem;

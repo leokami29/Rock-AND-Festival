@@ -1,66 +1,64 @@
-@use 'variables' as v;
-
+@use 'variables' as v; // Importar el módulo 'variables' y asignarle un alias 'v'
 
 html {
-    font-size: 62.5%;
-    box-sizing: border-box;
+    font-size: 62.5%; // Establecer el tamaño de fuente base en 10px (62.5% de 16px)
+    box-sizing: border-box; // Utilizar el modelo de caja 'border-box' para todos los elementos
 }
 
 *,
 *:before,
 *:after {
-box-sizing: inherit;
+    box-sizing: inherit; // Heredar el modelo de caja 'border-box' para todos los elementos y pseudo-elementos
 }
 
 body {
-    font-family: v.$fuente_principal;
-    font-size: 1.6rem;
+    font-family: v.$fuente_principal; // Utilizar la variable '$fuente_principal' definida en el módulo 'variables' como fuente principal
+    font-size: 1.6rem; // Establecer el tamaño de fuente en 1.6rem (16px)
 
     &.fijar__body {
-        overflow: hidden;
+        overflow: hidden; // Ocultar el desbordamiento del contenido cuando se aplica la clase 'fijar__body'
     }
 
     &.body__scroll {
-        padding-top: 8.6rem;
+        padding-top: 8.6rem; // Añadir un espacio en la parte superior del body cuando se aplica la clase 'body__scroll'
     }
 }
 
 p {
-    font-size: 2rem;
-    color: v.$negro;
-    line-height: 1.5;
-    
+    font-size: 2rem; // Establecer el tamaño de fuente de los párrafos en 2rem (20px)
+    color: v.$negro; // Utilizar la variable '$negro' definida en el módulo 'variables' como color de texto
+    line-height: 1.5; // Establecer la altura de línea en 1.5
 }
 
 .contenedor {
-    width: 95%;
-    max-width: 120rem;
-    margin: 0 auto;
+    width: 95%; // Establecer el ancho del contenedor en 95% del contenedor padre
+    max-width: 120rem; // Establecer el ancho máximo del contenedor en 120rem (1200px)
+    margin: 0 auto; // Centrar el contenedor horizontalmente utilizando márgenes automáticos
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none; // Quitar la decoración de texto subrayado en los enlaces
 }
 
 h1, h2, h3 {
-    margin: 0 0 5rem 0;
+    margin: 0 0 5rem 0; // Establecer el margen inferior de los títulos h1, h2 y h3 en 5rem (50px)
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 4rem; // Establecer el tamaño de fuente del h1 en 4rem (40px)
 }
 
 h2 {
-    font-size: 3.6rem;
+    font-size: 3.6rem; // Establecer el tamaño de fuente del h2 en 3.6rem (36px)
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 3rem; // Establecer el tamaño de fuente del h3 en 3rem (30px)
 }
 
 img {
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    display: block;
+    max-width: 100%; // Establecer el ancho máximo de las imágenes en 100% para que se ajusten al contenedor
+    width: 100%; // Establecer el ancho de las imágenes en 100% para que se ajusten al contenedor
+    height: auto; // Ajustar automáticamente la altura de las imágenes en función del ancho para mantener la proporción
+    display: block; // Establecer el tipo de visualización de las imágenes como 'block' para alinearlas correctamente
 }

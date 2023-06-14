@@ -1,5 +1,6 @@
-@use 'variables' as v;
+@use 'variables' as v; // Importar el módulo 'variables' y asignarle un alias 'v'
 
+// Mixin para encabezados con opciones personalizables
 // @mixin heading ($color: blue, $border-radius: false){
 //     text-transform: uppercase;
 //     font-size: 2.4rem;
@@ -12,36 +13,42 @@
 //     }
 // }
 
-
+// Mixin para estilos específicos en dispositivos de teléfono
 @mixin telefono {
     @media (min-width: v.$telefono) {
-        @content;
+        @content; // Incluir el contenido del mixin cuando se cumpla la condición del media query
     }
-} 
+}
 
+// Mixin para estilos específicos en dispositivos de tablet
 @mixin tablet {
     @media (min-width: v.$tablet) {
-        @content;
+        @content; // Incluir el contenido del mixin cuando se cumpla la condición del media query
     }
-} 
+}
 
+// Mixin para estilos específicos en dispositivos de escritorio
 @mixin desktop {
     @media (min-width: v.$desktop) {
-        @content;
+        @content; // Incluir el contenido del mixin cuando se cumpla la condición del media query
     }
-} 
+}
 
+// Mixin para estilos específicos en dispositivos de escritorio extra grandes
 @mixin desktopXl {
     @media (min-width: v.$desktopXL) {
-        @content;
+        @content; // Incluir el contenido del mixin cuando se cumpla la condición del media query
     }
-} 
+}
+
+// Mixin para crear una cuadrícula con columnas y espaciado personalizados
 @mixin grid ($columnas, $espaciado) {
     display: grid;
     grid-template-columns: repeat($columnas, 1fr);
     gap: $espaciado;
 }
 
+// Mixin para restablecer estilos de las listas
 @mixin resetear_lista {
     margin: 0;
     padding: 0;
